@@ -1,4 +1,5 @@
-/* General page style */
+/* ================= GENERAL PAGE STYLE ================= */
+
 body {
     margin: 0;
     font-family: Georgia, "Times New Roman", serif;
@@ -7,7 +8,9 @@ body {
     line-height: 1.6;
 }
 
-/* Header */
+
+/* ================= HEADER ================= */
+
 header {
     background-color: #f3d2c1;
     text-align: center;
@@ -24,13 +27,16 @@ header h1 {
 header p {
     font-size: 1.2rem;
     margin-top: 5px;
+    color: #4a2c2a;
 }
 
-/* Navigation */
+
+/* ================= NAVIGATION ================= */
+
 nav ul {
     list-style-type: none;
     padding: 0;
-    margin-top: 20px;
+    margin: 20px 0 0;
 }
 
 nav li {
@@ -39,6 +45,7 @@ nav li {
 }
 
 nav a {
+    display: inline-block;
     text-decoration: none;
     background-color: #fff5ec;
     color: #6b2f2f;
@@ -52,7 +59,9 @@ nav a:hover {
     color: white;
 }
 
-/* Main content */
+
+/* ================= MAIN CONTENT ================= */
+
 main {
     max-width: 1100px;
     margin: 30px auto;
@@ -61,7 +70,13 @@ main {
     border-radius: 18px;
 }
 
-/* Headings */
+section {
+    margin-bottom: 35px;
+}
+
+
+/* ================= HEADINGS ================= */
+
 h2 {
     font-family: "Brush Script MT", "Lucida Handwriting", cursive;
     font-size: 2.4rem;
@@ -69,105 +84,230 @@ h2 {
     text-align: center;
 }
 
-h3 {
+h3,
+.gallery-category {
     color: #6b2f2f;
+    text-align: center;
 }
 
-/* Paragraphs */
+.gallery-category {
+    font-size: 1.6rem;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+
+/* ================= PARAGRAPHS ================= */
+
 p {
     font-size: 1.05rem;
 }
 
-/* Images */
+
+/* ================= GENERAL IMAGES ================= */
+
 img {
     max-width: 100%;
-    height:auto;
-    object-fit: cover;
+    height: auto;
     border-radius: 15px;
-    display:block;
-    margin:auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* Gallery style*/
-.gallery-category {
-    font-family: "Brush Script MT", "Lucida Handwriting", cursive;
-    font-size: 2.5rem;
-    color: #8a4b44;
-    text-align: center;
-    grid-column: 1 / -1;
-}
 
-figure img {
+/* ================= HOME HERO IMAGE ================= */
+
+.hero-image {
     width: 100%;
-    height: 240px;
-    object-fit: contain;
-    background-color: #fffaf5;
-    padding: 8px;
+    max-width: 850px;
+    height: 400px;
+    object-fit: cover;
 }
 
-/* Table styling */
-table {
+
+/* ================= PRODUCT IMAGES ================= */
+
+.product-image {
+    width: 100%;
+    max-width: 450px;
+    height: 300px;
+    object-fit: cover;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+
+/* ================= ABOUT IMAGE ================= */
+
+.about-image {
+    width: 100%;
+    max-width: 400px;
+    height: 400px;
+    object-fit: cover;
+    margin-bottom: 25px;
+}
+
+
+/* ================= GALLERY ================= */
+
+.page-intro {
+    text-align: center;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+.gallery-grid figure {
+    background-color: #f8e8dc;
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    margin: 0;
+}
+
+.gallery-grid figure img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+figcaption {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #5c332f;
+    margin-top: 10px;
+}
+
+
+/* ================= MENU TABLE ================= */
+
+.menu-table {
     width: 100%;
     border-collapse: collapse;
     margin: 25px 0;
     background-color: #fff5ec;
 }
 
-th {
+.menu-table th {
     background-color: #d9a7a0;
     color: white;
     padding: 12px;
 }
 
-td {
+.menu-table td {
     border: 1px solid #d9a7a0;
     padding: 12px;
     text-align: center;
 }
 
-/* Form styling */
-form {
+
+/* ================= ORDER FORM ================= */
+
+.order-form {
     background-color: #f8e8dc;
-    padding: 20px;
+    padding: 25px;
     border-radius: 15px;
 }
 
-label {
+.order-form label {
     font-weight: bold;
 }
 
-input,
-select,
-textarea {
+.order-form input,
+.order-form select,
+.order-form textarea {
     width: 100%;
+    box-sizing: border-box;
     padding: 10px;
     margin-top: 5px;
     border: 1px solid #d9a7a0;
     border-radius: 8px;
+    font-family: Georgia, "Times New Roman", serif;
     font-size: 1rem;
 }
 
-input[type="submit"],
-input[type="reset"] {
-    width: auto;
+.order-form textarea {
+    resize: vertical;
+}
+
+
+/* ================= FORM BUTTONS ================= */
+
+.submit-button,
+.reset-button {
+    width: auto !important;
     background-color: #8a4b44;
     color: white;
     border: none;
     padding: 12px 20px;
+    margin-top: 10px;
     margin-right: 10px;
     cursor: pointer;
+    font-weight: bold;
 }
 
-input[type="submit"]:hover,
-input[type="reset"]:hover {
+.submit-button:hover,
+.reset-button:hover {
     background-color: #6b2f2f;
 }
 
-/* Footer */
+
+/* ================= FOOTER ================= */
+
 footer {
     text-align: center;
     background-color: #f3d2c1;
     padding: 20px;
     margin-top: 30px;
     color: #4a2c2a;
+}
+
+
+/* ================= MOBILE RESPONSIVE DESIGN ================= */
+
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 2.3rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    nav li {
+        display: block;
+        margin: 12px 0;
+    }
+
+    nav a {
+        width: 70%;
+    }
+
+    main {
+        margin: 15px;
+        padding: 18px;
+    }
+
+    .hero-image {
+        height: 250px;
+    }
+
+    .product-image {
+        height: 250px;
+    }
+
+    .about-image {
+        height: 350px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
 }
